@@ -16,5 +16,6 @@ Finalmente para obtener la figura geometrica de la cual se trata, se obtiene la 
 [![firmas.png](https://i.postimg.cc/fy3Gyj7z/firmas.png)](https://postimg.cc/4HgLFcFq)
 
 En consola podemos leer el resultado obtenido.
+
 [![resultado.jpg](https://i.postimg.cc/cL8fhKhv/resultado.jpg)](https://postimg.cc/Xr4Z7YTW)
 
