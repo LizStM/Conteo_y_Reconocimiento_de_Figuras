@@ -10,7 +10,7 @@ Separacion de figuras por color, basando los valores de cada tono dentro de cada
 [![porcolor.png](https://i.postimg.cc/Qdj7r6Jr/porcolor.png)](https://postimg.cc/WhfzGwy9)
 
 Se localizan los bordes de cada figura, asi como su respectivo centroide. Cada borde es distiguido por una tonalidad diferente de gris, siendo el borde con tono mas oscuro la figura 1, hasta llegar a la última con un borde mas claro.
-[![bordes.jpg](https://i.postimg.cc/W19wYLLy/bordes.jpg)](https://postimg.cc/WdkZty4m)
+[![bordes.jpg](https://i.postimg.cc/9f95cBpc/bordes.jpg)](https://postimg.cc/Y4ty3YZP)
 
 Finalmente para obtener la figura geometrica de la cual se trata, se obtiene la firma de cada fugura, y es ésta la que se clasifica.
 [![firmas.png](https://i.postimg.cc/fy3Gyj7z/firmas.png)](https://postimg.cc/4HgLFcFq)
