@@ -1,8 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 19 15:58:37 2023
-@author: Liz
-"""
+#Cuenta y reconoce por color y forma todas las figuras presentes
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, transform,color, morphology
@@ -158,12 +154,13 @@ for centro in centroides:
 
 
 firmas = Obtener_Firma(coordenadas, objeto, sumacoor)
-print('\nTomando en cuenta el borde mas oscuro como la figura 1, y el borde mas brillante como la ultima:')
+print('\nSe encontraron',objeto,'figuras dentro de la imagen.')
+print('Tomando en cuenta el borde con tono mas oscuro como la figura 1, y el borde mas brillante como la última:')
 for nfig in range(objeto):#Clasifica por figuras por forma geometrica
     #fig=0
     longitud = int(sumacoor[nfig,2])
     nfirma = firmas[nfig,0:longitud]
-    plt.figure(), plt.plot(nfirma)
+    plt.figure(), plt.title('firma firgura '+str(nfig+1)), plt.plot(nfirma)
     
     promedio = np.mean(nfirma)
     nfirmaf = np.where(nfirma<promedio*1.1, 0, nfirma)
@@ -181,13 +178,15 @@ for nfig in range(objeto):#Clasifica por figuras por forma geometrica
         print("\n    La figura", nfig+1, "es un círculo")
 
 
-#Figuras       
-plt.figure('rgb'), plt.title('Kmeans en RGB de imagen original'), plt.imshow(segmentacion_rgb)
+#Figuras  
+plt.figure('original'), plt.title('Imagen original'), plt.imshow(imagen)
+     
+plt.figure('kmeans'), plt.title('Imagen despues de aplicar Kmeans'), plt.imshow(segmentacion_rgb)
 
 plt.figure('rojo'), plt.title('Figuras rojas'), plt.imshow(porColor[:,:,0], cmap='gray')
 plt.figure('verde'), plt.title('Figuras verdes'), plt.imshow(porColor[:,:,1], cmap='gray')  
 plt.figure('azul'), plt.title('Figuras azules'), plt.imshow(porColor[:,:,2], cmap='gray')
 
-plt.figure('grises'),plt.title('Escala de grises'), plt.imshow(escalaGrises, cmap='gray')
+#plt.figure('grises'),plt.title('Escala de grises'), plt.imshow(escalaGrises, cmap='gray')
 
-plt.figure('bordes distinguidos'),plt.title('bordes distinguidos por tono y centroides'),plt.imshow(bordesDistinguidos, cmap='gray')#De la mas oscura a la mas clara: objeto 0, objeto 1 ...
+plt.figure('bordes distinguidos'),plt.title('Centroides y bordes distinguidos por tono'),plt.imshow(bordesDistinguidos, cmap='gray')#De la mas oscura a la mas clara: objeto 0, objeto 1 ...
