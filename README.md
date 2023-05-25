@@ -1,21 +1,22 @@
 # Conteo y Reconocimiento de Figuras.
 
-A partir de una fotografia que contiene figuras geometricas de distinto color (rojo, verde y azul), se clasifican por color y posteriormente se devuelve la cantidad de figuras, asi como la figura geometrica correspondiente.
+ A partir de una fotografia que contiene figuras geometricas de distinto color (rojo, verde y azul).
 
-# Agunos resultados dentro del proceso.
-La imagen original es procesada con el metodo Kmeans para obtener mejor distincion entre colores.
-[![1.png](https://i.postimg.cc/bNsfr8Yy/1.png)](https://postimg.cc/gnFTtC6Q)
+[![original.jpg](https://i.postimg.cc/G2XVGH6P/original.jpg)](https://postimg.cc/gX6gPkzr)
 
-Separacion de figuras por color, basando los valores de cada tono dentro de cada capa de color.
-[![porcolor.png](https://i.postimg.cc/Qdj7r6Jr/porcolor.png)](https://postimg.cc/WhfzGwy9)
+ Se emplean metodos para el procesamiento de la imagen, como son: Kmeans, firma de un objeto, morfologia, entre otros. 
+Con lo que se pueden obtener dos resultados:
+# Reconocimiento por color y forma de todas las figuras presentes en a imagen.
+ Cada borde es distiguido por una tonalidad diferente de gris, siendo el borde con tono mas oscuro la figura 1, hasta llegar a la última con un borde mas claro.
 
-Se localizan los bordes de cada figura, asi como su respectivo centroide. Cada borde es distiguido por una tonalidad diferente de gris, siendo el borde con tono mas oscuro la figura 1, hasta llegar a la última con un borde mas claro.
-[![bordes.jpg](https://i.postimg.cc/9f95cBpc/bordes.jpg)](https://postimg.cc/Y4ty3YZP)
+[![bordes.jpg](https://i.postimg.cc/Bbyz7RSX/bordes.jpg)](https://postimg.cc/7J3XfsTk)
 
-Finalmente para obtener la figura geometrica de la cual se trata, se obtienen las firmas, y son éstas las que se clasifican.
-[![firmas.png](https://i.postimg.cc/fy3Gyj7z/firmas.png)](https://postimg.cc/4HgLFcFq)
+El resultado es visualizado por medio de la consola
 
-En consola podemos leer el resultado obtenido.
+[![resultado.jpg](https://i.postimg.cc/sgPn5MhB/resultado.jpg)](https://postimg.cc/hXjbBPMg)
 
-[![resultado.jpg](https://i.postimg.cc/cL8fhKhv/resultado.jpg)](https://postimg.cc/Xr4Z7YTW)
+# Encontrar la figura solicitada por el usuario.
+El color y forma de la figura a encontrar, es solicitado al usuario por medio de la consola, posteriormente es señalado el centro de la figura dentro de la imagen.
 
+[![busqueda-Figura.jpg](https://i.postimg.cc/K8N8w5Tm/busqueda-Figura.jpg)](https://postimg.cc/nXXxQBTW)
+[![resultado-Figura-Solicitada.jpg](https://i.postimg.cc/xTv73prT/resultado-Figura-Solicitada.jpg)](https://postimg.cc/RN0XMRVj)
