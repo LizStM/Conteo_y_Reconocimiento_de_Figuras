@@ -6,7 +6,7 @@
 
  Se emplean metodos para el procesamiento de la imagen, como son: Kmeans, firma de un objeto, morfologia, entre otros. 
 Con lo que se pueden obtener dos resultados:
-# Reconocimiento por color y forma de todas las figuras presentes en a imagen.
+# Reconocimiento por color y forma de todas las figuras presentes en la imagen.
  Cada borde es distiguido por una tonalidad diferente de gris, siendo el borde con tono mas oscuro la figura 1, hasta llegar a la última con un borde mas claro.
 
 [![bordes.jpg](https://i.postimg.cc/Bbyz7RSX/bordes.jpg)](https://postimg.cc/7J3XfsTk)
